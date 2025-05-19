@@ -2,22 +2,22 @@
 
 Setup
 
-'''bash
+```bash
 git clone https://github.com/07Abhinav/BookStore-API.git
 cd BookStore-API
-'''
+```
 
 Install Dependencies
 
-'''bash
+```bash
 npm i
-'''
+```
 
 Start server
 
-'''bash
+```bash
 node server.js
-'''
+```
 
 API Testing
 
@@ -26,32 +26,32 @@ Auth API's
 Signup
 
 Method POST
-'''bash
+```bash
 http://localhost:5000/auth/signup
-'''
+```
 
 JSON
-'''bash
+```bash
 {
   "username": "Any name",
   "password": "Your Password"
 }
-'''
+```
 
 Login
 
 Method POST
-'''bash
+```bash
 http://localhost:5000/auth/login
-'''
+```
 
 JSON
-'''bash
+```bash
 {
   "username": "Any name",
   "password": "Your Password"
 }
-'''
+```
 It will return a token
 
 Book API's
@@ -59,23 +59,23 @@ Book API's
 Add Book
 
 Method POST
-'''bash
+```bash
 http://localhost:5000/books
-'''
+```
 
 Headers:
 
 Authorization: Bearer <your_token_here>
 
 JSON
-'''bash
+```bash
 {
   "title": "The Great Gatsby",
   "author": "F. Scott Fitzgerald",
   "genre": "Fiction",
   "description": "A novel set in the Jazz Age"
 }
-'''
+```
 
 Get All Books (Paginated + Filtered)
 Method: GET
@@ -92,47 +92,47 @@ Review API's
 Add Review
 
 Method POST
-'''bash
+```bash
 http://localhost:5000/books/<book_id_here>/reviews
-'''
+```
 
 Headers:
 
 Authorization: Bearer <your_token_here>
 
 JSON
-'''bash
+```bash
 {
   "rating": 5,
   "comment": "A masterpiece of literature!"
 }
-'''
+```
 
 Update Review
 
 Method PUT
-'''bash
+```bash
 http://localhost:5000/reviews/<review_id_here>
-'''
+```
 
 Headers:
 
 Authorization: Bearer <your_token_here>
 
 JSON
-'''bash
+```bash
 {
   "rating": 4,
   "comment": "Actually, it could be shorter."
 }
-'''
+```
 
 Delete Review
 
 Method DELETE
-'''bash
+```bash
 http://localhost:5000/reviews/<review_id_here>
-'''
+```
 
 Headers:
 
